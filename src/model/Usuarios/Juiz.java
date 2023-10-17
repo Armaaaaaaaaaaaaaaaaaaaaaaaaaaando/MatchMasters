@@ -1,4 +1,4 @@
-package src.Usuarios;
+package src.model.Usuarios;
 
 public class Juiz extends Pessoa{
     private Integer Partidas_apitadas;

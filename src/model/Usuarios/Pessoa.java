@@ -1,4 +1,4 @@
-package src.Usuarios;
+package src.model.Usuarios;
 
 public abstract class Pessoa {
     private String nome;

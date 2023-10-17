@@ -1,4 +1,4 @@
-package src.Usuarios;
+package src.model.Usuarios;
 
 public class Adm extends Pessoa{
     private String login;

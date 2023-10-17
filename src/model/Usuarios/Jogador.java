@@ -1,4 +1,4 @@
-package src.Usuarios;
+package src.model.Usuarios;
 
 public class Jogador extends Pessoa{
     //o clube é do tipo clube, está string até q a classe clube seja criada

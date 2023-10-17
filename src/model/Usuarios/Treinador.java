@@ -1,4 +1,4 @@
-package src.Usuarios;
+package src.model.Usuarios;
 
 public class Treinador extends Pessoa{
     private Integer Anos_experiencia;
