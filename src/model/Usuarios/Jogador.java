@@ -1,8 +1,10 @@
 package src.model.Usuarios;
 
+import src.model.Jogo.Clube;
+
 public class Jogador extends Pessoa{
     //o clube é do tipo clube, está string até q a classe clube seja criada
-    private String Clube;
+    private Clube clube;
     private String Posicao;
     private String Data_admisão;
     private String Data_final_contrato;
@@ -13,9 +15,8 @@ public class Jogador extends Pessoa{
     private String cartoes_vermelhos;
 
 
-
     public Jogador(String nome, Integer idade, String Posicao,Integer Temporadas,Integer gols_marcados,
-                   Integer assistencias, String cartoes_amarelos,String cartoes_vermelhos){
+                   Integer assistencias, String cartoes_amarelos,String cartoes_vermelhos,Clube clube){
         this.setNome(nome);
         this.setIdade(idade);
         this.setPosicao(Posicao);
@@ -24,16 +25,14 @@ public class Jogador extends Pessoa{
         this.setAssistencias(assistencias);
         this.setCartoes_amarelos(cartoes_amarelos);
         this.setCartoes_vermelhos(cartoes_vermelhos);
+        this.clube = clube;
 
     }
 
-    public String getClube() {
-        return Clube;
+    public Clube getClube() {
+        return clube;
     }
 
-    public void setClube(String clube) {
-        Clube = clube;
-    }
 
     public String getPosicao() {
         return Posicao;
