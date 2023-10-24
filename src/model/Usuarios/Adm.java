@@ -5,6 +5,13 @@ public class Adm extends Pessoa{
 
     private String senha;
 
+    public Adm(String nome, Integer idade, String login, String senha){
+        super.setNome(nome);
+        super.setIdade(idade);
+        this.login = login;
+        this.senha = senha;
+    }
+
     public String getLogin() {
         return login;
     }
