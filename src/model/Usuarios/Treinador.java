@@ -1,5 +1,7 @@
 package src.model.Usuarios;
 
+import src.model.Jogo.Clube;
+
 public class Treinador extends Pessoa{
     private Integer Anos_experiencia;
 
@@ -7,10 +9,14 @@ public class Treinador extends Pessoa{
 
     private String Data_final_contrato;
 
-    //tambem do tipo clube, mas está string até ser criada a classe clube
-    private String Clube;
+    private Clube clube;
 
-
+    public Treinador(String nome, Integer idade, Integer anos_experiencia, Clube clube){
+        this.setNome(nome);
+        this.setIdade(idade);
+        this.clube = clube;
+        this.Anos_experiencia = anos_experiencia;
+    }
 
     public Integer getAnos_experiencia() {
         return Anos_experiencia;
@@ -36,11 +42,8 @@ public class Treinador extends Pessoa{
         Data_final_contrato = data_final_contrato;
     }
 
-    public String getClube() {
-        return Clube;
+    public Clube getClube() {
+        return clube;
     }
 
-    public void setClube(String clube) {
-        Clube = clube;
-    }
 }
