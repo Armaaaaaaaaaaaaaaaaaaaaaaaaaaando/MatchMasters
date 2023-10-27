@@ -10,9 +10,6 @@ Em comparação com o projeto do pbl
 
 
 Coisas a fazer:
-- Pensar no que os metodos iniciar partida e finalizar partida fazem
-- Atualizar metodo gol, para indicar qual jogador marcou o gol.
-- Como relacionar qual juiz apitou a partida
 - Criar estatisticas campeonato, para poder ver classificacao e etc. 
 - Criar daoestatiscicas
 - Criar estatistcas partida, e o dao estatisticapartida
@@ -21,3 +18,8 @@ Coisas a fazer:
 depois dos acima
 - Criar exceções
 - Criar testes
+
+
+Dificuldades:
+A dificuldade é como vou executar a classe Estat_campeonato. A sua principal função é calcular 
+a classificação, disponibilizando uma visão dos melhores times e dos piores, o artilheiro do campeonato, os times cadastrados dentre outros. 
