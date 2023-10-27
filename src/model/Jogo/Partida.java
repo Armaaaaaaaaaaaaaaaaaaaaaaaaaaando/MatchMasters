@@ -72,7 +72,6 @@ public class Partida {
         if(time.getNome() == time1.getNome() && goleador.getClube().getNome() == time.getNome()){
             setGols_time_1(getGols_time_1()+1);
             goleadores.add(goleador);
-
         }
         else{
             setGols_time_2(getGols_time_2()+1);
