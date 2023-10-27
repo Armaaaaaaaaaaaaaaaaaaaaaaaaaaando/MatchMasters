@@ -15,6 +15,14 @@ public class Partida {
     private Integer rodada;
     private LinkedList<Jogador> goleadores = new LinkedList<>();
 
+    public Partida(Clube time1, Clube time2, Juiz juiz){
+        this.gols_time_1 = 0;
+        this.gols_time_2 = 0;
+        this.time1 = time1;
+        this.time2 = time2;
+        this.juiz = juiz;
+    }
+
     public Juiz getJuiz() {
         return juiz;
     }
@@ -29,22 +37,6 @@ public class Partida {
 
     public void setData(String data) {
         Data = data;
-    }
-
-    public Clube getTime1() {
-        return time1;
-    }
-
-    public void setTime1(Clube time1) {
-        this.time1 = time1;
-    }
-
-    public Clube getTime2() {
-        return time2;
-    }
-
-    public void setTime2(Clube time2) {
-        this.time2 = time2;
     }
 
     public Integer getGols_time_1() {
