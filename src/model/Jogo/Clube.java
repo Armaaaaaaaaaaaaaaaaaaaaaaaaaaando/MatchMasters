@@ -23,6 +23,13 @@ public class Clube {
         this.estado = estado;
     }
 
+    public Treinador getTreinador() {
+        return treinador;
+    }
+
+    public void setTreinador(Treinador treinador) {
+        this.treinador = treinador;
+    }
 
     public Integer getVitorias() {
         return vitorias;

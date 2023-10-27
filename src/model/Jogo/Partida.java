@@ -92,17 +92,29 @@ public class Partida {
         System.out.println("PARTIDA FINALIZADA");
         System.out.println(time1.getNome() + gols_time_1 + " X " +time2.getNome() + gols_time_2);
         juiz.setPartidas_apitadas(juiz.getPartidas_apitadas()+1);
+        time1.getTreinador().setPartidas(time1.getTreinador().getPartidas()+1);
+        time2.getTreinador().setPartidas(time2.getTreinador().getPartidas()+1);
         if(gols_time_1 > gols_time_2){
             time1.setVitorias(time1.getVitorias()+1);
+            time1.getTreinador().setVitorias(time1.getTreinador().getVitorias()+1);
+
             time2.setDerrotas(time2.getDerrotas()+1);
+            time2.getTreinador().setDerrotas(time2.getTreinador().getDerrotas()+1);
+
         }
         else if(gols_time_2>gols_time_1){
             time1.setDerrotas(time1.getDerrotas()+1);
+            time1.getTreinador().setDerrotas(time1.getTreinador().getDerrotas()+1);
+
             time2.setVitorias(time2.getVitorias()+1);
+            time2.getTreinador().setVitorias(time2.getTreinador().getVitorias()+1);
+
         }
         else{
             time1.setEmpates(time1.getEmpates()+1);
             time2.setEmpates(time2.getEmpates()+1);
+            time1.getTreinador().setEmpates(time1.getTreinador().getEmpates()+1);
+            time2.getTreinador().setEmpates(time2.getTreinador().getEmpates()+1);
         }
 
     }

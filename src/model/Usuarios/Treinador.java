@@ -3,7 +3,10 @@ package src.model.Usuarios;
 import src.model.Jogo.Clube;
 
 public class Treinador extends Pessoa{
-    private Integer Anos_experiencia;
+    private Integer vitorias;
+    private Integer derrotas;
+    private Integer empates;
+    private Integer partidas;
 
     private String Data_admisão;
 
@@ -11,19 +14,47 @@ public class Treinador extends Pessoa{
 
     private Clube clube;
 
-    public Treinador(String nome, Integer idade, Integer anos_experiencia, Clube clube){
+    public Treinador(String nome, Integer idade,Integer vitorias, Integer derrotas, Integer empates, Integer partidas,
+                     Clube clube){
         this.setNome(nome);
         this.setIdade(idade);
         this.clube = clube;
-        this.Anos_experiencia = anos_experiencia;
+        this.vitorias = 0;
+        this.derrotas = 0;
+        this.empates = 0;
+        this.partidas = 0;
     }
 
-    public Integer getAnos_experiencia() {
-        return Anos_experiencia;
+    public Integer getVitorias() {
+        return vitorias;
     }
 
-    public void setAnos_experiencia(Integer anos_experiencia) {
-        Anos_experiencia = anos_experiencia;
+    public void setVitorias(Integer vitorias) {
+        this.vitorias = vitorias;
+    }
+
+    public Integer getDerrotas() {
+        return derrotas;
+    }
+
+    public void setDerrotas(Integer derrotas) {
+        this.derrotas = derrotas;
+    }
+
+    public Integer getEmpates() {
+        return empates;
+    }
+
+    public void setEmpates(Integer empates) {
+        this.empates = empates;
+    }
+
+    public Integer getPartidas() {
+        return partidas;
+    }
+
+    public void setPartidas(Integer partidas) {
+        this.partidas = partidas;
     }
 
     public String getData_admisão() {
