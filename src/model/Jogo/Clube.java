@@ -8,15 +8,46 @@ import java.util.LinkedList;
 public class Clube {
     private LinkedList<Jogador> jogadores = new LinkedList<>();
     private String nome;
-    private Integer Posicao_classificacao;
+    private Integer vitorias;
+    private Integer derrotas;
+    private Integer empates;
+
     private String estado;
     private Treinador treinador;
 
-    public Clube(String nome, Integer Posicao_classificacao, String estado){
+    public Clube(String nome, Integer vitorias,Integer derrotas, Integer empates, String estado){
         this.nome = nome;
-        this.Posicao_classificacao = Posicao_classificacao;
+        this.vitorias = 0;
+        this.derrotas = 0;
+        this.empates = 0;
         this.estado = estado;
     }
+
+
+    public Integer getVitorias() {
+        return vitorias;
+    }
+
+    public void setVitorias(Integer vitorias) {
+        this.vitorias = vitorias;
+    }
+
+    public Integer getDerrotas() {
+        return derrotas;
+    }
+
+    public void setDerrotas(Integer derrotas) {
+        this.derrotas = derrotas;
+    }
+
+    public Integer getEmpates() {
+        return empates;
+    }
+
+    public void setEmpates(Integer empates) {
+        this.empates = empates;
+    }
+
 
     public String getNome() {
         return nome;
@@ -26,13 +57,7 @@ public class Clube {
         this.nome = nome;
     }
 
-    public Integer getPosicao_classificacao() {
-        return Posicao_classificacao;
-    }
 
-    public void setPosicao_classificacao(Integer posicao_classificacao) {
-        Posicao_classificacao = posicao_classificacao;
-    }
 
     public String getEstado() {
         return estado;

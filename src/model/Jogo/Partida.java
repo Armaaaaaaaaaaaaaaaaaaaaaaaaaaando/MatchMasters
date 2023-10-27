@@ -91,6 +91,20 @@ public class Partida {
     private void finalizar(Clube time1,Clube time2){
         System.out.println("PARTIDA FINALIZADA");
         System.out.println(time1.getNome() + gols_time_1 + " X " +time2.getNome() + gols_time_2);
+        juiz.setPartidas_apitadas(juiz.getPartidas_apitadas()+1);
+        if(gols_time_1 > gols_time_2){
+            time1.setVitorias(time1.getVitorias()+1);
+            time2.setDerrotas(time2.getDerrotas()+1);
+        }
+        else if(gols_time_2>gols_time_1){
+            time1.setDerrotas(time1.getDerrotas()+1);
+            time2.setVitorias(time2.getVitorias()+1);
+        }
+        else{
+            time1.setEmpates(time1.getEmpates()+1);
+            time2.setEmpates(time2.getEmpates()+1);
+        }
+
     }
 
     private void atualizar_classificacao(Clube time1,Clube time2){
