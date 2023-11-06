@@ -3,16 +3,13 @@ ideias:
 - Eu acho que a classe partida, seria mais um controlador do que uma classe que necessita de dao
 
 Questões:
-- Tentar entender o funcionamento do MasterDao na chamada dos daos
 
 
 Em comparação com o projeto do pbl
 
 
 Coisas a fazer:
-- Criar estatisticas campeonato, para poder ver classificacao e etc. 
-- Criar daoestatiscicas
-- Criar estatistcas partida, e o dao estatisticapartida
+- Criar uma maneira de poder visualizar os 3 maiores artilheiros do campeonato, podendo identificar quais os times
 
 
 depois dos acima
@@ -21,5 +18,4 @@ depois dos acima
 
 
 Dificuldades:
-A dificuldade é como vou executar a classe Estat_campeonato. A sua principal função é calcular 
-a classificação, disponibilizando uma visão dos melhores times e dos piores, o artilheiro do campeonato, os times cadastrados dentre outros. 
+Qual estrutura de dados utilizarei para ajeitar a coisa pra fazer pendente
