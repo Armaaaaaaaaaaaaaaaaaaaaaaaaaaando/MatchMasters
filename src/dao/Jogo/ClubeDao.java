@@ -34,8 +34,17 @@ public class ClubeDao implements IClubeDao{
         if(lista.contains(a)){
             return a;
         }
-        else{
+        else {
             return null;
         }
+    }
+    @Override
+    public int findSize() {
+        return lista.size();
+    }
+
+    @Override
+    public LinkedList findAll() {
+        return lista;
     }
 }
