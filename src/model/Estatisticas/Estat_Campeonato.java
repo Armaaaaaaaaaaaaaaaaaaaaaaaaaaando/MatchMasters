@@ -11,7 +11,7 @@ import java.util.PriorityQueue;
 
 
 public class Estat_Campeonato {
-    private HashMap<String, LinkedList> artilheiros_por_time = new HashMap<>();
+    private HashMap<String, Integer> artilheiros = new HashMap<>();
     private HashMap<String,Integer> Classificacao = new HashMap<String, Integer>();
     private PriorityQueue<String> filaDePrioridade = new PriorityQueue<>(Comparator.comparing(Classificacao::get).reversed());
     private LinkedList<Clube> clubes = new LinkedList<>();
@@ -41,9 +41,8 @@ public class Estat_Campeonato {
     }
 
     public void Artilheiros(){
-        LinkedList<String> artilheiros = new LinkedList<>();
-        for(Clube j : clubes){
-
+        for(Clube c : clubes){
+            artilheiros.put(c.getmaiorgoleador().getNome(), c.getmaiorgoleador().getGols_marcados());
         }
     }
 
