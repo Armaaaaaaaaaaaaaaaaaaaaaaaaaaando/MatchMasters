@@ -1,6 +1,9 @@
 package src.model.Usuarios;
 
+import src.Excecoes.Usuarios.JogadorException;
 import src.model.Jogo.Clube;
+
+import static src.util.Constantes.CreationJogador;
 
 public class Jogador extends Pessoa{
     //o clube é do tipo clube, está string até q a classe clube seja criada
@@ -16,17 +19,21 @@ public class Jogador extends Pessoa{
 
 
     public Jogador(String nome, Integer idade, String Posicao,Integer Temporadas,Integer gols_marcados,
-                   Integer assistencias, String cartoes_amarelos,String cartoes_vermelhos,Clube clube){
-        this.setNome(nome);
-        this.setIdade(idade);
-        this.setPosicao(Posicao);
-        this.setTemporadas(Temporadas);
-        this.setGols_marcados(gols_marcados);
-        this.setAssistencias(assistencias);
-        this.setCartoes_amarelos(cartoes_amarelos);
-        this.setCartoes_vermelhos(cartoes_vermelhos);
-        this.clube = clube;
-
+                   Integer assistencias, String cartoes_amarelos,String cartoes_vermelhos,Clube clube) throws JogadorException {
+        try{
+            this.setNome(nome);
+            this.setIdade(idade);
+            this.setPosicao(Posicao);
+            this.setTemporadas(Temporadas);
+            this.setGols_marcados(gols_marcados);
+            this.setAssistencias(assistencias);
+            this.setCartoes_amarelos(cartoes_amarelos);
+            this.setCartoes_vermelhos(cartoes_vermelhos);
+            this.clube = clube;
+        }
+        catch (Exception e){
+            throw new JogadorException(CreationJogador,null);
+        }
     }
 
     public Clube getClube() {

@@ -1,6 +1,9 @@
 package src.model.Usuarios;
 
+import src.Excecoes.Usuarios.TreinadorException;
 import src.model.Jogo.Clube;
+
+import static src.util.Constantes.CreationTreinador;
 
 public class Treinador extends Pessoa{
     private Integer vitorias;
@@ -15,14 +18,19 @@ public class Treinador extends Pessoa{
     private Clube clube;
 
     public Treinador(String nome, Integer idade,Integer vitorias, Integer derrotas, Integer empates, Integer partidas,
-                     Clube clube){
-        this.setNome(nome);
-        this.setIdade(idade);
-        this.clube = clube;
-        this.vitorias = 0;
-        this.derrotas = 0;
-        this.empates = 0;
-        this.partidas = 0;
+                     Clube clube) throws TreinadorException {
+        try{
+            this.setNome(nome);
+            this.setIdade(idade);
+            this.clube = clube;
+            this.vitorias = 0;
+            this.derrotas = 0;
+            this.empates = 0;
+            this.partidas = 0;
+        }
+        catch (Exception e){
+            throw new TreinadorException(CreationTreinador, null);
+        }
     }
 
     public Integer getVitorias() {
