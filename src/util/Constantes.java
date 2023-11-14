@@ -5,4 +5,7 @@ public class Constantes {
     public final static String CreationJogador = "Impossivel criar Jogador";
     public final static String CreationJuiz = "Impossivel criar Juiz";
     public final static String CreationTreinador = "Impossivel criar Treinador";
+    public final static String CreationClube = "Impossivel criar Clube";
+    public final static String CreationPartida = "Impossivel criar Partida";
+    public final static String CreationCampeonato = "Impossivel criar Campeonato";
 }

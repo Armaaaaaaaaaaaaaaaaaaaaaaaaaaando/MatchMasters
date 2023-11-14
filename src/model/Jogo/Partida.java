@@ -1,9 +1,12 @@
 package src.model.Jogo;
+import src.Excecoes.Jogo.PartidaException;
 import src.model.Usuarios.Jogador;
 import src.model.Usuarios.Juiz;
 import src.model.Jogo.Clube;
 
 import java.util.LinkedList;
+
+import static src.util.Constantes.CreationPartida;
 
 public class Partida {
     private Juiz juiz;
@@ -15,12 +18,18 @@ public class Partida {
     private Integer rodada;
     private LinkedList<Jogador> goleadores = new LinkedList<>();
 
-    public Partida(Clube time1, Clube time2, Juiz juiz){
-        this.gols_time_1 = 0;
-        this.gols_time_2 = 0;
-        this.time1 = time1;
-        this.time2 = time2;
-        this.juiz = juiz;
+    public Partida(Clube time1, Clube time2, Juiz juiz) throws Exception{
+        try{
+            this.gols_time_1 = 0;
+            this.gols_time_2 = 0;
+            this.time1 = time1;
+            this.time2 = time2;
+            this.juiz = juiz;
+        }
+        catch (Exception e){
+            throw new PartidaException(CreationPartida,null);
+        }
+
     }
 
     public Juiz getJuiz() {

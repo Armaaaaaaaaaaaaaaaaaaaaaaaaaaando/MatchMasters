@@ -1,11 +1,14 @@
 package src.model.Jogo;
 
+import src.Excecoes.Jogo.ClubeException;
 import src.model.Usuarios.Jogador;
 import src.model.Usuarios.Treinador;
 
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
+
+import static src.util.Constantes.CreationClube;
 
 public class Clube {
     private LinkedList<Jogador> jogadores = new LinkedList<>();
@@ -18,12 +21,18 @@ public class Clube {
     private String estado;
     private Treinador treinador;
 
-    public Clube(String nome, Integer vitorias,Integer derrotas, Integer empates, String estado){
-        this.nome = nome;
-        this.vitorias = 0;
-        this.derrotas = 0;
-        this.empates = 0;
-        this.estado = estado;
+    public Clube(String nome, Integer vitorias,Integer derrotas, Integer empates, String estado) throws ClubeException {
+        try{
+            this.nome = nome;
+            this.vitorias = 0;
+            this.derrotas = 0;
+            this.empates = 0;
+            this.estado = estado;
+        }
+        catch (Exception e){
+            throw new ClubeException(CreationClube,null);
+        }
+
     }
 
     public Treinador getTreinador() {

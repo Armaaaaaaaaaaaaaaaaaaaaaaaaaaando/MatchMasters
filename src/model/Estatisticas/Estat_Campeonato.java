@@ -1,5 +1,6 @@
 package src.model.Estatisticas;
 
+import src.Excecoes.Estatisticas.CampeonatoException;
 import src.dao.MasterDao;
 import src.model.Jogo.Clube;
 import src.model.Usuarios.Jogador;
@@ -9,6 +10,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 
+import static src.util.Constantes.CreationCampeonato;
+
 
 public class Estat_Campeonato {
     private HashMap<String, Integer> artilheiros = new HashMap<>();
@@ -16,7 +19,7 @@ public class Estat_Campeonato {
     private PriorityQueue<String> filaDePrioridade = new PriorityQueue<>(Comparator.comparing(Classificacao::get).reversed());
     private LinkedList<Clube> clubes = new LinkedList<>();
 
-    public Estat_Campeonato(){
+    public Estat_Campeonato() throws CampeonatoException {
         if(MasterDao.getClubedao().findSize() == 20){
             clubes = MasterDao.getClubedao().findAll();
             for(Clube j : clubes){
@@ -24,7 +27,7 @@ public class Estat_Campeonato {
             }
         }
         else{
-            //aqui lança exceção
+            throw new CampeonatoException(CreationCampeonato, null);
         }
     }
     public void Atualizarclassificacao(){
