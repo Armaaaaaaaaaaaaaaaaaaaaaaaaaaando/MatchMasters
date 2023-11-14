@@ -8,4 +8,8 @@ public class Constantes {
     public final static String CreationClube = "Impossivel criar Clube";
     public final static String CreationPartida = "Impossivel criar Partida";
     public final static String CreationCampeonato = "Impossivel criar Campeonato";
+    public final static String SaveError = "Impossivel salvar repetidamente";
+    public final static String DeleteError = "Impossivel deletar arquivo nao encontrado";
+    public final static String UpdateError = "Impossivel atualizar, arquivo nao encontrado, ou...";
+    public final static String FindError = "Impossivel Encontrar";
 }
