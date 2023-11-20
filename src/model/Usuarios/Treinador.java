@@ -14,11 +14,9 @@ public class Treinador extends Pessoa{
     private String Data_admisão;
 
     private String Data_final_contrato;
+    private String clube;
 
-    private Clube clube;
-
-    public Treinador(String nome, Integer idade,Integer vitorias, Integer derrotas, Integer empates, Integer partidas,
-                     Clube clube) throws TreinadorException {
+    public Treinador(String nome, Integer idade, String clube) throws TreinadorException {
         try{
             this.setNome(nome);
             this.setIdade(idade);
@@ -81,7 +79,7 @@ public class Treinador extends Pessoa{
         Data_final_contrato = data_final_contrato;
     }
 
-    public Clube getClube() {
+    public String getClube() {
         return clube;
     }
 
