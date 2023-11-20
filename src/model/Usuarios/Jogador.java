@@ -14,12 +14,12 @@ public class Jogador extends Pessoa{
     private Integer Temporadas;
     private Integer gols_marcados;
     private Integer assistencias;
-    private String cartoes_amarelos;
-    private String cartoes_vermelhos;
+    private Integer cartoes_amarelos;
+    private Integer cartoes_vermelhos;
 
 
     public Jogador(String nome, Integer idade, String Posicao,Integer Temporadas,Integer gols_marcados,
-                   Integer assistencias, String cartoes_amarelos,String cartoes_vermelhos,Clube clube) throws JogadorException {
+                   Integer assistencias, Integer cartoes_amarelos,Integer cartoes_vermelhos,Clube clube) throws JogadorException {
         try{
             this.setNome(nome);
             this.setIdade(idade);
@@ -89,19 +89,19 @@ public class Jogador extends Pessoa{
         this.assistencias = assistencias;
     }
 
-    public String getCartoes_amarelos() {
+    public Integer getCartoes_amarelos() {
         return cartoes_amarelos;
     }
 
-    public void setCartoes_amarelos(String cartoes_amarelos) {
+    public void setCartoes_amarelos(Integer cartoes_amarelos) {
         this.cartoes_amarelos = cartoes_amarelos;
     }
 
-    public String getCartoes_vermelhos() {
+    public Integer getCartoes_vermelhos() {
         return cartoes_vermelhos;
     }
 
-    public void setCartoes_vermelhos(String cartoes_vermelhos) {
+    public void setCartoes_vermelhos(Integer cartoes_vermelhos) {
         this.cartoes_vermelhos = cartoes_vermelhos;
     }
 }
