@@ -3,20 +3,25 @@ package src.dao.Usuarios;
 import java.util.LinkedList;
 
 import src.Excecoes.Usuarios.AdmException;
+import src.dao.FIleManager;
+import src.dao.MasterDao;
 import src.model.Usuarios.Adm;
 
 import static src.util.Constantes.*;
 
 public class AdmDao implements IAdmDao{
-    LinkedList<Adm> lista = new LinkedList<Adm>();
+    private LinkedList<Adm> lista = new LinkedList<Adm>();
+
 
     @Override
     public void save(Adm adm) throws AdmException {
-        if(!lista.contains(adm)){
-            lista.add(adm);
+        if(lista.contains(adm)){
+            throw new AdmException(SaveError, MasterDao.getAdmdao().find(adm));
         }
         else{
-            throw new AdmException(SaveError, null);
+            adm = new Adm(adm.getNome(),adm.getIdade(),adm.getLogin(),adm.getSenha());
+            lista.add(adm);
+            FIleManager.saveAdm(this.lista);
         }
     }
 
